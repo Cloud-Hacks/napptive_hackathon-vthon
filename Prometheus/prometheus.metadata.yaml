@@ -1,0 +1,17 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Prometheus"
+version: "latest"
+description: Prometheus is a systems and service monitoring system
+keywords:
+  - "prometheus"
+  - "monitoring"
+  - "metrics"
+license: "Apache-2.0"
+url: "https://prometheus.io/"
+doc: "https://prometheus.io/docs/introduction/overview/"
+logo:
+  - src: "https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg"
+    type: "image/png"
+    size: "200x200"
+

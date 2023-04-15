@@ -1,0 +1,32 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: prometheus
+  annotations:
+    version: "latest"
+    description: "Prometheus is a systems and service monitoring system"
+spec:
+  components:
+    - name: prometheus
+      type: webservice
+      properties:
+        image: prom/prometheus:latest
+        ports:
+            - port: 9090
+              expose: true
+        cpu: "200m"
+        memory: "256Mi"
+      traits:
+        - type: napptive-ingress
+          properties:
+            name: prom-server
+            port: 9090
+            path: /
+            rewritePath: /
+        - type: storage # Set to storage
+          properties:            
+            configMap: # ConfigMap type storage
+              - name: prom-cm
+                mountOnly: false # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+                mountPath: /config/prometheus.yml
+

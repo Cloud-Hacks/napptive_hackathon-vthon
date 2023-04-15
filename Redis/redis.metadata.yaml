@@ -1,0 +1,16 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Redis"
+version: "latest"
+description: Redis database
+keywords:
+  - "redis"
+  - "database"
+license: "BSD-3-Clause"
+url: "https://redis.io"
+doc: "https://hub.docker.com/_/redis"
+logo:
+  - src: "https://upload.wikimedia.org/wikipedia/commons/6/64/Logo-redis.svg" 
+    type: "image/png"
+    size: "150x150"
+
