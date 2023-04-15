@@ -1,0 +1,19 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Jenkins"
+version: "latest"
+description: "Jenkins is an open source automation server to automate all sorts of tasks related to building, testing, and delivering or deploying software"
+keywords:
+  - "jenkins"
+  - "automation"
+  - "continuous integration"
+  - "continuous delivery"
+license: "MIT"
+url: "https://www.jenkins.io/"
+doc: "https://www.jenkins.io/doc/"
+logo:
+  - src: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg"
+    type: "image/png"
+    size: "200x200"
+
+

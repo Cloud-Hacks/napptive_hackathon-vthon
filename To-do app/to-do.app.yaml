@@ -1,0 +1,25 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: djangotodo
+  annotations:
+    version: "latest"
+    description: "Simple django to-do web page"
+spec:
+  components:
+    - name: djangotodo
+      type: webservice
+      properties:
+        image: samyak2203/todoapp:v1
+        ports:
+            - port: 8000
+              expose: true
+        cpu: "200m"
+        memory: "256Mi"
+      traits:
+        - type: napptive-ingress
+          properties:
+            name: django-server
+            port: 8000
+            path: /
+            rewritePath: /
