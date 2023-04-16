@@ -1,0 +1,26 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: influxdb
+  annotations:
+    version: "latest"
+    description: "InfluxDB is a time series database built from the ground up to handle high write and query loads."
+spec:
+  components:
+    - name: influxdb
+      type: statefulservice
+      properties:
+        image: influxdb
+        imagePullPolicy: Always
+        replicas: 1
+        ports:
+          - port: 8086
+            expose: true
+        cpu: "500m"
+        memory: "512Mi"
+      traits:
+        - type: storage
+          properties:
+            emptyDir:
+              - name: influxdb-vol
+                mountPath: /var/lib/influxdb2

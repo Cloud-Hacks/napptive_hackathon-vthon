@@ -1,0 +1,15 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "parcona"
+version: "latest"
+description: "parcona Server for MySQL is a free, fully compatible, enhanced, open source drop-in replacement for MySQL."
+keywords:
+  - "parcona"
+  - "database"
+license: "Apache License 2.0"
+url: "https://hub.docker.com/_/percona"
+doc: "https://www.percona.com/software/documentation"
+logo:
+  - src: "https://d1q6f0aelx0por.cloudfront.net/product-logos/library-percona-logo.png" 
+    type: "image/png"
+    size: "150x150"

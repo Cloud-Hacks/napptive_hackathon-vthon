@@ -1,0 +1,31 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: percona-mysql
+  annotations:
+    version: "latest"
+    description: "Percona Server for MySQL is a free, fully compatible, enhanced, open source drop-in replacement for MySQL."
+spec:
+  components:
+    - name: percona-mysql
+      type: webservice
+      properties:
+        image: percona
+        imagePullPolicy: Always
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: "my-secret-pw"
+        ports:
+          - port: 8080
+            expose: true
+        cpu: "500m"
+        memory: "512Mi"
+      traits:
+        - type: storage
+          properties:
+            configMap:
+              - name: percona-cm
+                mountPath: /etc/my.cnf.d
+
+
+          
