@@ -8,11 +8,10 @@ metadata:
 spec:
   components:
     - name: percona-mysql
-      type: statefulservice
+      type: webservice
       properties:
         image: percona
         imagePullPolicy: Always
-        replicas: 1
         env:
           - name: MYSQL_ROOT_PASSWORD
             value: "my-secret-pw"
@@ -27,3 +26,6 @@ spec:
             configMap:
               - name: percona-cm
                 mountPath: /etc/my.cnf.d
+
+
+          

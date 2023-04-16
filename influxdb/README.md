@@ -1,6 +1,6 @@
 # Influxdb
 
-> influxdb is a multi-model, open-source database with flexible data models for documents, graphs, and key-values.
+> InfluxDB is a time series database built from the ground up to handle high write and query loads.
 
 Deploys a influx db server that can be accessed using the `Influxdb:8086` endpoint. 
 You can connect to the influx db server from other applications or components running in the same environment.

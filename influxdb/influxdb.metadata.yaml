@@ -1,16 +1,16 @@
 apiVersion: core.napptive.com/v1alpha1
 kind: ApplicationMetadata
-name: "ArangoDB"
-version: "3.8.9"
-description: "ArangoDB is a multi-model, open-source database with flexible data models for documents, graphs, and key-values."
+name: "influxdb"
+version: "latest"
+description: "InfluxDB is a time series database built from the ground up to handle high write and query loads."
 keywords:
-  - "ArangoDB"
+  - "influxdb"
   - "database"
-license: "Apache License 2.0"
-url: "https://hub.docker.com/r/arangodb/arangodb"
-doc: "https://www.arangodb.com/documentation"
+license: "MIT License"
+url: "https://hub.docker.com/_/influxdb"
+doc: "https://docs.influxdata.com/"
 logo:
-  - src: "https://www.arangodb.com/wp-content/uploads/2022/07/ArangoDB-Stacking-Logo-2022.png" 
+  - src: "https://d1q6f0aelx0por.cloudfront.net/product-logos/library-influxdb-logo.png" 
     type: "image/png"
     size: "150x150"
 

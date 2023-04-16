@@ -3,8 +3,8 @@ kind: Application
 metadata:
   name: influxdb
   annotations:
-    version: "3.8.9"
-    description: "influxdb is a multi-model, open-source database with flexible data models for documents, graphs, and key-values."
+    version: "latest"
+    description: "InfluxDB is a time series database built from the ground up to handle high write and query loads."
 spec:
   components:
     - name: influxdb
