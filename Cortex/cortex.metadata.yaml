@@ -1,0 +1,17 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Cortex"
+version: "1.11-22.04_beta"
+description: Cortex is a multi-tenant, horizontally scalable Prometheus-as-a-Service
+keywords:
+  - "cortex"
+  - "prometheus"
+  - "monitoring"
+  - "metrics"
+license: "Apache-2.0"
+url: "https://cortexmetrics.io/"
+doc: "https://cortexmetrics.io/docs/"
+logo:
+  - src: "https://upload.wikimedia.org/wikipedia/commons/9/99/Cortex_Logo.svg"
+    type: "image/svg"
+    size: "120x120"
