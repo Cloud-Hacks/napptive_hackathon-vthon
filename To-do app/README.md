@@ -14,13 +14,13 @@ After deploying the application, you can find it in your terminal:
 ```
 $ playgorund apps info jenkins
 Target environment: samyaksheokar22/default
-NAME          STATUS
-djangotodo    RUNNING
+NAME       STATUS
+todoapp    RUNNING
 
-COMPONENT     STATUS     SCOPES    TRAITS
-djangotodo    RUNNING              napptive-ingress
+COMPONENT    STATUS     SCOPES    TRAITS
+todoapp      RUNNING              napptive-ingress
 
-COMPONENT     INGRESSES
-djangotodo    django-server-cgr2t05t998c97mful2g.apps.playground.napptive.dev
+COMPONENT    INGRESSES
+todoapp      django-server-cgr2t05t998c97mful2g.apps.playground.napptive.dev
 
 ```

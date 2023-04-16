@@ -1,16 +1,16 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  name: djangotodo
+  name: todoapp
   annotations:
-    version: "latest"
+    version: "4.1.1"
     description: "Simple django to-do web page"
 spec:
   components:
-    - name: djangotodo
+    - name: todoapp
       type: webservice
       properties:
-        image: samyak2203/todoapp:v1
+        image: samyak2203/django-todo-app:v1
         ports:
             - port: 8000
               expose: true
