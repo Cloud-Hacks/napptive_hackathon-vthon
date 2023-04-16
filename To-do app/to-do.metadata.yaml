@@ -8,8 +8,8 @@ keywords:
   - "to-do"
   - "web page"
 license: "Apache License 2.0"
-url: "https://www.djangoproject.com/"
-doc: "https://hub.docker.com/_/django"
+url: "https://django-server-cgqputbh51taq9hpjldg.apps.hackathon.napptive.dev/todos/"
+doc: "https://github.com/SamyakSheokar2203/Django-todo-cicd2"
 logo:
   # Do not hotlink images without permission :)
   - src: "https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg"
