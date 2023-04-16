@@ -1,0 +1,16 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "ArangoDB"
+version: "3.8.9"
+description: "ArangoDB is a multi-model, open-source database with flexible data models for documents, graphs, and key-values."
+keywords:
+  - "ArangoDB"
+  - "database"
+license: "Apache License 2.0"
+url: "https://hub.docker.com/r/arangodb/arangodb"
+doc: "https://www.arangodb.com/documentation"
+logo:
+  - src: "https://logovectorseek.com/wp-content/uploads/2020/10/timescale-inc-logo-vector.png" 
+    type: "image/png"
+    size: "150x150"
+

@@ -23,10 +23,10 @@ spec:
             port: 9090
             path: /
             rewritePath: /
-        - type: storage # Set to storage
-          properties:            
-            configMap: # ConfigMap type storage
+        - type: storage
+          properties:
+            configMap:
               - name: prom-cm
-                mountOnly: false # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+                mountOnly: false
                 mountPath: /config/prometheus.yml
 

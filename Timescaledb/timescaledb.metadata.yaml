@@ -1,0 +1,16 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Timescaledb"
+version: "pg14-latest"
+description: "Timescale an open-source time-series database optimized for fast ingest and complex queries"
+keywords:
+  - "timescale"
+  - "database"
+license: "Apache License 2.0"
+url: "https://hub.docker.com/r/timescale/timescaledb"
+doc: "https://docs.timescale.com/install/latest/installation-docker"
+logo:
+  - src: "https://logovectorseek.com/wp-content/uploads/2020/10/timescale-inc-logo-vector.png" 
+    type: "image/png"
+    size: "150x150"
+

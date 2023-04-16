@@ -1,0 +1,29 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: arangodb
+  annotations:
+    version: "3.8.9"
+    description: "ArangoDB is a multi-model, open-source database with flexible data models for documents, graphs, and key-values."
+spec:
+  components:
+    - name: arangodb
+      type: statefulservice
+      properties:
+        image: arangodb/arangodb:3.8.9
+        imagePullPolicy: Always
+        replicas: 1
+        ports:
+            - port: 8529
+              expose: true
+        cpu: "500m"
+        memory: "512Mi"
+        env:
+          - name: ARANGO_RANDOM_ROOT_PASSWORD
+            value: "1"
+      traits:
+        - type: storage
+          properties:         
+            emptyDir:
+              - name: data-persistent
+                mountPath: /var/lib/arangodb3

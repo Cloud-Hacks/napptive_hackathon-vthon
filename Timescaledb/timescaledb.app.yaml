@@ -1,0 +1,26 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: timescaledb
+  annotations:
+    version: "pg14-latest"
+    description: "Timescaledb an open-source time-series database"
+spec:
+  components:
+    - name: timescaledb
+      type: statefulservice
+      properties:
+        image: timescale/timescaledb-ha:pg14-latest
+        imagePullPolicy: Always
+        replicas: 1
+        ports:
+            - port: 5432
+              expose: true
+        cpu: "500m"
+        memory: "512Mi"
+        env:
+          - name: POSTGRES_USER
+            value: "postgres"
+          - name: POSTGRES_PASSWORD
+            value: "password"
+
