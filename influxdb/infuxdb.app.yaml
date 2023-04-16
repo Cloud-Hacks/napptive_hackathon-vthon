@@ -1,0 +1,26 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: influxdb
+  annotations:
+    version: "3.8.9"
+    description: "influxdb is a multi-model, open-source database with flexible data models for documents, graphs, and key-values."
+spec:
+  components:
+    - name: influxdb
+      type: statefulservice
+      properties:
+        image: influxdb
+        imagePullPolicy: Always
+        replicas: 1
+        ports:
+          - port: 8086
+            expose: true
+        cpu: "500m"
+        memory: "512Mi"
+      traits:
+        - type: storage
+          properties:
+            emptyDir:
+              - name: influxdb-vol
+                mountPath: /var/lib/influxdb2
