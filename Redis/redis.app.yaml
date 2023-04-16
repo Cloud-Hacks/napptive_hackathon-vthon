@@ -8,10 +8,9 @@ metadata:
 spec:
   components:
     - name: redis
-      type: statefulservice
+      type: webservice
       properties:
         image: redis:5.0.7
-        replicas: 1
         ports:
           - port: 6379
             expose: true
@@ -26,8 +25,5 @@ spec:
             configMap:
               - name: config
                 mountPath: /redis-master
-                mountToEnv: # mount to Environment variables (inly one variable, uses mountToEnvs it there is more than one)
-                  configMapKey: redis-config # cm key
                 data: # (Optional) if the cm is going to be created, data field contains the cm data
                   redis-config: "" # key - value data
-
