@@ -15,15 +15,19 @@ spec:
         ports:
           - port: 6379
             expose: true
-        resources:
-          requests:
-            cpu: 100m
-          limits:
-            cpu: 500m
+        cpu: "200m"
+        memory: "256Mi"
       traits:
         - type: storage
           properties:
-            ConfigMap:
-              
-
+            emptyDir:
+              - name: redis-data
+                mountPath: /redis-master-data
+            configMap:
+              - name: config
+                mountPath: /redis-master
+                mountToEnv: # mount to Environment variables (inly one variable, uses mountToEnvs it there is more than one)
+                  configMapKey: redis-config # cm key
+                data: # (Optional) if the cm is going to be created, data field contains the cm data
+                  redis-config: "" # key - value data
 
