@@ -4,6 +4,8 @@
 
 ![n2](https://user-images.githubusercontent.com/11625672/232335801-390a9bfa-0637-4f0c-aa66-55521f54e595.png)
 
+![n3](https://user-images.githubusercontent.com/11625672/232335852-42692ca7-3dbe-4fcb-a981-c694081f07e6.png)
+
 ## Idea of the project:
 To showcase the capabilities of the Napptive platform and demonstrate how to use OAM to define and deploy a custom application. 
 To deliver easy-to-deploy tools at one click
