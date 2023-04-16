@@ -8,9 +8,10 @@ metadata:
 spec:
   components:
     - name: redis
-      type: webservice
+      type: statefulservice
       properties:
         image: redis:5.0.7
+        replicas: 1
         ports:
           - port: 6379
             expose: true
@@ -22,13 +23,7 @@ spec:
       traits:
         - type: storage
           properties:
-            pvc:
-              - name: data
-                accessModes:
-                - ReadWriteOnce
-                mountPath: /data/db
-                resources:
-                  requests:
-                    storage: 1G
+            ConfigMap:
+              
 
 
