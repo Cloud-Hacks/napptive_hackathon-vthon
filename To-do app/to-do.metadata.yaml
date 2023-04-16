@@ -1,0 +1,17 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "todoapp"
+version: "4.1.1"
+description: "Simple django to-do web page"
+keywords:
+  - "django"
+  - "to-do"
+  - "web page"
+license: "Apache License 2.0"
+url: "https://www.djangoproject.com/"
+doc: "https://hub.docker.com/_/django"
+logo:
+  # Do not hotlink images without permission :)
+  - src: "https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg"
+    type: "image/png"
+    size: "120x120"

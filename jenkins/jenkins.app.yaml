@@ -1,0 +1,31 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: jenkins
+  annotations:
+    version: "latest"
+    description: "Jenkins a open source automation server for software delivery"
+spec:
+  components:
+    - name: jenkins
+      type: webservice
+      properties:
+        image: jenkins/jenkins:lts
+        ports:
+            - port: 8080
+              expose: true
+        cpu: "500m"
+        memory: "512Mi"
+      traits:
+        - type: napptive-ingress
+          properties:
+            name: jenks-client
+            port: 8080
+            path: /
+            rewritePath: /
+        - type: storage
+          properties:         
+            emptyDir:
+              - name: jenkins-vol
+                mountPath: /var/jenkins_home
+
