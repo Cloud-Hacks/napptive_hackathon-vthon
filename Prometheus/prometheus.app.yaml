@@ -28,5 +28,5 @@ spec:
             configMap:
               - name: prom-cm
                 mountOnly: false
-                mountPath: /config/prometheus.yml
+                mountPath: /etc/prometheus
 
