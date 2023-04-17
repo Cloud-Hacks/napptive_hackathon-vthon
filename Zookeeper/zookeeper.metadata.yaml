@@ -1,0 +1,16 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "ZooKeeper"
+version: "3.8.1"
+description: Apache ZooKeeper is a distributed coordination service for distributed applications.
+keywords:
+  - "zookeeper"
+  - "distributed systems"
+license: "Apache-2.0"
+url: "https://zookeeper.apache.org"
+doc: "https://zookeeper.apache.org/doc/r3.8.1/index.html"
+logo:
+  - src: "https://raw.githubusercontent.com/docker-library/docs/f906e95d1c27856aa79ea1bd8600da51466e7b0b/zookeeper/logo.png"
+    type: "image/png"
+    size: "150x150"
+

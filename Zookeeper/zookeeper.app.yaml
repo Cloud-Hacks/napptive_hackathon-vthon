@@ -1,0 +1,29 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: zookeeper
+  annotations:
+    version: "3.8.1"
+    description: "Zookeeper a high-performance service for building distributed applications"
+spec:
+  components:
+    - name: zookeeper
+      type: webservice
+      properties:
+        image: zookeeper:3.8.1
+        imagePullPolicy: Always
+        ports:
+            - port: 2181
+              expose: true
+        cpu: "500m"
+        memory: "512Mi"
+        env:
+          - name: ZOO_LOG4J_PROP
+            value: "INFO,ROLLINGFILE"
+      traits:
+        - type: storage
+          properties:         
+            emptyDir:
+              - name: logs-vol
+                mountPath: /logs/zookeeper.log
+
