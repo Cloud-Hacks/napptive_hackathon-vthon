@@ -11,10 +11,14 @@ spec:
       type: webservice
       properties:
         image: redis:5.0.7
+        env:
+          - name: MASTER
+            value: "true"
+        cmd: ["redis-server", "/redis-master/redis.conf"]
         ports:
           - port: 6379
             expose: true
-        cpu: "200m"
+        cpu: "0.1"
         memory: "256Mi"
       traits:
         - type: storage
@@ -24,6 +28,6 @@ spec:
                 mountPath: /redis-master-data
             configMap:
               - name: config
-                mountPath: /redis-master
+                mountPath: /redis-master/redis.conf
                 data: # (Optional) if the cm is going to be created, data field contains the cm data
                   redis-config: "" # key - value data
